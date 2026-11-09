@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Equipment</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Edit Equipment</h1>
+
+        <form action="{{ url_for('edit_equipment', id=equipment.id) }}"
+              method="POST">
+
+            <label>Equipment Name</label>
+
+            <input type="text"
+                   name="name"
+                   value="{{ equipment.name }}"
+                   placeholder="Enter equipment name"
+                   required>
+
+            <label>Equipment Category</label>
+
+            <input type="text"
+                   name="category"
+                   value="{{ equipment.category }}"
+                   placeholder="Enter equipment category"
+                   required>
+
+            <button type="submit">
+                Save Changes
+            </button>
+
+            <a href="{{ url_for('index') }}" class="btn">
+                Cancel
+            </a>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
