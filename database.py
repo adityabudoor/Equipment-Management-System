@@ -7,12 +7,15 @@ load_dotenv()
 
 def get_db_connection():
     connection = mysql.connector.connect(
-        host=os.getenv("DB_HOST", "127.0.0.1"),
-        port=int(os.getenv("DB_PORT", "3306")),
-        user=os.getenv("DB_USER", "root"),
+        host=os.getenv("DB_HOST"),
+        port=int(os.getenv("DB_PORT", "4000")),
+        user=os.getenv("DB_USER"),
         password=os.getenv("DB_PASSWORD"),
-        database=os.getenv("DB_NAME", "college_equipment"),
-        connection_timeout=5,
+        database=os.getenv("DB_NAME"),
+        ssl_ca=os.getenv("DB_SSL_CA", "tidb-ca.pem"),
+        ssl_verify_cert=True,
+        ssl_verify_identity=True,
+        connection_timeout=15,
         use_pure=True
     )
 
