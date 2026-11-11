@@ -1,116 +1,82 @@
-# Equipment Management System
+# Equipment Management System Using Python
 
-A web-based Equipment Management System developed using Python, Flask, and MySQL to manage college equipment efficiently.
+A web-based Equipment Management System developed using Python Flask and a MySQL-compatible cloud database. It helps manage college equipment through a simple and user-friendly interface.
 
-## Project Overview
+## 🌐 Live Demo
 
-The Equipment Management System helps colleges and educational institutions maintain records of their equipment. It allows users to add, update, search, borrow, return, and delete equipment through a simple web interface.
+**Live Application:** https://equipment-management-system-hmbm.onrender.com
 
-## Objectives
+## 📌 Project Overview
 
-- To maintain equipment records digitally.
-- To simplify equipment borrowing and returning.
-- To track equipment availability.
-- To reduce manual record-keeping.
-- To provide an easy-to-use management interface.
+The Equipment Management System is designed to simplify the management of college equipment. Users can add, update, search, borrow, return, and delete equipment through a web-based interface.
 
-## Technologies Used
+The application uses Flask for backend development and TiDB Cloud for database management.
 
-- **Programming Language:** Python
-- **Backend Framework:** Flask
-- **Database:** MySQL
-- **Frontend:** HTML, CSS
-- **Database Connectivity:** MySQL Connector
+## ✨ Features
 
-## Key Features
+- Dashboard displaying equipment information.
+- Add new equipment.
+- Borrow available equipment.
+- Return borrowed equipment.
+- Search equipment by name or category.
+- Edit existing equipment details.
+- Delete equipment.
+- Form validation.
+- Responsive and user-friendly interface.
 
-1. **Dashboard:** View equipment records and availability.
-2. **Add Equipment:** Add new equipment with its name and category.
-3. **Edit Equipment:** Update existing equipment details.
-4. **Delete Equipment:** Remove equipment records.
-5. **Borrow Equipment:** Assign equipment to a borrower.
-6. **Return Equipment:** Update equipment status after return.
-7. **Search Equipment:** Search equipment by name or category.
-8. **Input Validation:** Prevent incomplete form submissions.
+## 🛠️ Technologies Used
 
-## Project Structure
+| Technology | Purpose |
+|---|---|
+| Python | Backend programming |
+| Flask | Web framework |
+| MySQL / TiDB Cloud | Database management |
+| HTML | Webpage structure |
+| CSS | User interface design |
+| Git & GitHub | Version control and source code hosting |
+| Render | Application deployment |
 
-```text
-Equipment-Management-System/
-│
-├── app.py
-├── database.py
-├── requirements.txt
-├── .gitignore
-│
-├── static/
-│   └── style.css
-│
-└── templates/
-    ├── index.html
-    ├── add_equipment.html
-    ├── edit_equipment.html
-    └── search.html
-```
+## 🗄️ Database
 
-## Database
+Database Name: `college_equipment`
 
-The project uses MySQL with a database named `college_equipment`.
+Table Name: `equipment`
 
-The main table is `equipment`, which stores:
+The equipment table contains:
 
-- Equipment ID
-- Equipment Name
+- ID
+- Name
 - Category
-- Availability Status
-- Borrower Name
+- Status
+- Borrower
 
-## Installation and Setup
+## ⚙️ Run Locally
 
-1. Clone this repository:
+1. Clone this repository.
+2. Install the required Python packages:
 
-```bash
-git clone https://github.com/adityabudoor/Equipment-Management-System.git
-```
+   `pip install -r requirements.txt`
 
-2. Open the project folder:
+3. Create a `.env` file using the `.env.example` template.
+4. Configure your database credentials and SSL certificate.
+5. Run the application:
 
-```bash
-cd Equipment-Management-System
-```
+   `python app.py`
 
-3. Install the required dependencies:
+6. Open your browser and visit:
 
-```bash
-pip install -r requirements.txt
-```
+   `http://127.0.0.1:5000/`
 
-4. Create a MySQL database named `college_equipment` and create the equipment table.
+## 🚀 Deployment
 
-5. Configure your database connection using environment variables in a `.env` file.
+The application is deployed using Render, with TiDB Cloud providing the hosted database.
 
-6. Run the Flask application:
-
-```bash
-python app.py
-```
-
-7. Open your browser and visit:
-
-```text
-http://127.0.0.1:5000/
-```
-
-## Future Improvements
-
-- User authentication and admin login.
-- Equipment usage reports.
-- Improved dashboard analytics.
-- Online deployment.
-- Role-based access control.
-
-## Author
+## 👨‍💻 Developer
 
 **Aditya Budur**
 
 B.Sc. Computer Science Student
+
+## 📄 License
+
+This project is available for educational and learning purposes.
